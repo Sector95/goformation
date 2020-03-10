@@ -17412,6 +17412,18 @@
                             },
                             "type": "array"
                         },
+                        "EnableHttpEndpoint": {
+                            "type": "boolean"
+                        },
+                        "EnableIAMDatabaseAuthentication": {
+                            "type": "boolean"
+                        },
+                        "Engine": {
+                            "type": "string"
+                        },
+                        "EngineMode": {
+                            "type": "string"
+                        },
                         "EngineVersion": {
                             "type": "string"
                         },
@@ -47768,9 +47780,21 @@
                             "type": "boolean"
                         },
                         "Engine": {
+                            "enum": [
+                                "aurora",
+                                "aurora-mysql",
+                                "aurora-postgresql"
+                            ],
                             "type": "string"
                         },
                         "EngineMode": {
+                            "enum": [
+                                "provisioned",
+                                "serverless",
+                                "parallelquery",
+                                "global",
+                                "multimaster"
+                            ],
                             "type": "string"
                         },
                         "EngineVersion": {
